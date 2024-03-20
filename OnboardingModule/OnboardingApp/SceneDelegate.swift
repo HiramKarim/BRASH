@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  BrashApp
+//  OnboardingApp
 //
 //  Created by Hiram Castro on 19/03/24.
 //
@@ -13,13 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let window = (scene as? UIWindowScene) else { return }
-        self.window = UIWindow(windowScene: window)
-        
-        let navController = UINavigationController(rootViewController: OnboardingVC())
-        
-        self.window?.rootViewController = navController
-        self.window?.makeKeyAndVisible()
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

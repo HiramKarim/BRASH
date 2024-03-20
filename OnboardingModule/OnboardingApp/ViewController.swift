@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BrashApp
+//  OnboardingApp
 //
 //  Created by Hiram Castro on 19/03/24.
 //

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */; };
 		1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */; };
-		1F73BDEC2BAA60F100321CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDEB2BAA60F100321CC6 /* ViewController.swift */; };
-		1F73BDEF2BAA60F100321CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDEE2BAA60F100321CC6 /* Base */; };
 		1F73BDF12BAA60F300321CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDF02BAA60F300321CC6 /* Assets.xcassets */; };
 		1F73BDF42BAA60F300321CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDF32BAA60F300321CC6 /* Base */; };
 		1F73BDFF2BAA60F300321CC6 /* BrashAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDFE2BAA60F300321CC6 /* BrashAppTests.swift */; };
@@ -26,6 +24,7 @@
 		1F73BEE02BAA6F9200321CC6 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F73BED72BAA6F9100321CC6 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F73BEE12BAA6F9200321CC6 /* StorageModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F73BED82BAA6F9100321CC6 /* StorageModule.framework */; };
 		1F73BEE22BAA6F9200321CC6 /* StorageModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F73BED82BAA6F9100321CC6 /* StorageModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F73BF1E2BAAA41900321CC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +66,6 @@
 		1F73BDE42BAA60F100321CC6 /* BrashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F73BDEB2BAA60F100321CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F73BDEE2BAA60F100321CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F73BDF02BAA60F300321CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F73BDF32BAA60F300321CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F73BDF52BAA60F300321CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +79,7 @@
 		1F73BED62BAA6F9100321CC6 /* NetworkingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BED72BAA6F9100321CC6 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BED82BAA6F9100321CC6 /* StorageModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StorageModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +136,9 @@
 		1F73BDE62BAA60F100321CC6 /* BrashApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F73BF1C2BAAA3E400321CC6 /* OnboardingScene */,
 				1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */,
 				1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */,
-				1F73BDEB2BAA60F100321CC6 /* ViewController.swift */,
-				1F73BDED2BAA60F100321CC6 /* Main.storyboard */,
 				1F73BDF02BAA60F300321CC6 /* Assets.xcassets */,
 				1F73BDF22BAA60F300321CC6 /* LaunchScreen.storyboard */,
 				1F73BDF52BAA60F300321CC6 /* Info.plist */,
@@ -176,6 +173,14 @@
 				1F73BED82BAA6F9100321CC6 /* StorageModule.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F73BF1C2BAAA3E400321CC6 /* OnboardingScene */ = {
+			isa = PBXGroup;
+			children = (
+				1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */,
+			);
+			path = OnboardingScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +290,6 @@
 			files = (
 				1F73BDF12BAA60F300321CC6 /* Assets.xcassets in Resources */,
 				1F73BDF42BAA60F300321CC6 /* Base in Resources */,
-				1F73BDEF2BAA60F100321CC6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F73BDEC2BAA60F100321CC6 /* ViewController.swift in Sources */,
 				1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */,
+				1F73BF1E2BAAA41900321CC6 /* OnboardingVC.swift in Sources */,
 				1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F73BDED2BAA60F100321CC6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F73BDEE2BAA60F100321CC6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F73BDF22BAA60F300321CC6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,6 +424,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -483,6 +480,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -497,6 +495,8 @@
 				DEVELOPMENT_TEAM = SNTB2L8C6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrashApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BRASH;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -525,6 +525,8 @@
 				DEVELOPMENT_TEAM = SNTB2L8C6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrashApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BRASH;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
