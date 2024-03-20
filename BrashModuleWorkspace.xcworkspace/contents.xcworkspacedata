@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:StorageModule/StorageModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OnboardingModule/OnboardingModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NetworkingModule/NetworkingModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:HomeModule/HomeModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AuthenticationModule/AuthenticationModule.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BrashApp/BrashApp.xcodeproj">
+   </FileRef>
+</Workspace>
