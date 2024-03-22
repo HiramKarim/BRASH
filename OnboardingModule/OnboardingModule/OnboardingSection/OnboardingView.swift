@@ -80,7 +80,7 @@ public struct OnboardingView: View {
                     Spacer()
                     
                     Button("Go to home") {
-                        delegate.finishCarousell()
+                        delegate.finishCarousel()
                     }
                     .buttonStyle(.borderedProminent)
                 }
