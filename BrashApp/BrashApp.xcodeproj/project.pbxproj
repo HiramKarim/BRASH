@@ -10,7 +10,6 @@
 		1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */; };
 		1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */; };
 		1F73BDF12BAA60F300321CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDF02BAA60F300321CC6 /* Assets.xcassets */; };
-		1F73BDF42BAA60F300321CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDF32BAA60F300321CC6 /* Base */; };
 		1F73BDFF2BAA60F300321CC6 /* BrashAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDFE2BAA60F300321CC6 /* BrashAppTests.swift */; };
 		1F73BE092BAA60F300321CC6 /* BrashAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BE082BAA60F300321CC6 /* BrashAppUITests.swift */; };
 		1F73BE0B2BAA60F300321CC6 /* BrashAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BE0A2BAA60F300321CC6 /* BrashAppUITestsLaunchTests.swift */; };
@@ -289,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F73BDF12BAA60F300321CC6 /* Assets.xcassets in Resources */,
-				1F73BDF42BAA60F300321CC6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +497,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,7 +527,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

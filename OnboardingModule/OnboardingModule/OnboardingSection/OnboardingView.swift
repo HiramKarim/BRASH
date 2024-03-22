@@ -7,15 +7,30 @@
 
 import SwiftUI
 
+private class RentImage {}
+internal extension Image {
+    static var rent: Image {
+        Image("rent-1", bundle: Bundle(for: RentImage.self))
+    }
+}
+
+public protocol CarousellActionDelegate:AnyObject {
+    func finishCarousell()
+}
+
 public struct OnboardingView: View {
+    
+    public var delegate:CarousellActionDelegate!
+    
     public init() { }
+
     public var body: some View {
         ZStack {
             Color.cyan
                 .opacity(0.8)
             TabView {
                 VStack {
-                    Image("rent-1")
+                    Image(.rent1)
                         .resizable()
                         .clipShape(Circle(), style: FillStyle())
                         .frame(width: 300, height: 300)
@@ -32,7 +47,7 @@ public struct OnboardingView: View {
                 }
                 
                 VStack {
-                    Image("rent-1")
+                    Image(.rent1)
                         .resizable()
                         .clipShape(Circle(), style: FillStyle())
                         .frame(width: 300, height: 300)
@@ -49,7 +64,7 @@ public struct OnboardingView: View {
                 }
                 
                 VStack {
-                    Image("rent-1")
+                    Image(.rent1)
                         .resizable()
                         .clipShape(Circle(), style: FillStyle())
                         .frame(width: 300, height: 300)
@@ -65,7 +80,7 @@ public struct OnboardingView: View {
                     Spacer()
                     
                     Button("Go to home") {
-                        
+                        delegate.finishCarousell()
                     }
                     .buttonStyle(.borderedProminent)
                 }
@@ -73,8 +88,9 @@ public struct OnboardingView: View {
             }
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .padding()
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(.all)
     }
 }
 
