@@ -34,8 +34,8 @@ class OnboardingVC: UIViewController {
     }
 }
 
-extension OnboardingVC: CarousellActionDelegate {
-    func finishCarousell() {
+extension OnboardingVC: CarouselActionDelegate {
+    func finishCarousel() {
         print("continue to another section")
     }
 }

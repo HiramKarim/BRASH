@@ -14,13 +14,13 @@ internal extension Image {
     }
 }
 
-public protocol CarousellActionDelegate:AnyObject {
-    func finishCarousell()
+public protocol CarouselActionDelegate:AnyObject {
+    func finishCarousel()
 }
 
 public struct OnboardingView: View {
     
-    public var delegate:CarousellActionDelegate!
+    public var delegate:CarouselActionDelegate!
     
     public init() { }
 
