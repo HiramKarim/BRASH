@@ -5,7 +5,7 @@
       location = "group:StorageModule/StorageModule.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:OnboardingModule/OnboardingModule.xcodeproj">
+      location = "group:AuthenticationModule/AuthenticationModule.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:NetworkingModule/NetworkingModule.xcodeproj">
@@ -14,7 +14,7 @@
       location = "group:HomeModule/HomeModule.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AuthenticationModule/AuthenticationModule.xcodeproj">
+      location = "group:BrashApp/../OnboardingModule/OnboardingModule.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:BrashApp/BrashApp.xcodeproj">

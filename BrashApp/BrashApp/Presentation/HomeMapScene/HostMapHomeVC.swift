@@ -1,15 +1,15 @@
 //
-//  OnboardingVC.swift
+//  HostMapHomeVC.swift
 //  BrashApp
 //
-//  Created by Hiram Castro on 19/03/24.
+//  Created by Hiram Castro on 22/03/24.
 //
 
+import Foundation
 import UIKit
 import SwiftUI
-import OnboardingModule
 
-class OnboardingVC: UIViewController {
+final class HostMapHomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +18,9 @@ class OnboardingVC: UIViewController {
     }
     
     private func configOnboarding() {
-        var onboardingView = OnboardingView()
-        onboardingView.delegate = self
-        let hostingOnboardingView = UIHostingController(rootView: onboardingView)
+        let mapView = HomeMapView()
+//        mapView.delegate = self
+        let hostingOnboardingView = UIHostingController(rootView: mapView)
         addChild(hostingOnboardingView)
         self.view.addSubview(hostingOnboardingView.view)
         hostingOnboardingView.view.translatesAutoresizingMaskIntoConstraints = false
@@ -31,11 +31,5 @@ class OnboardingVC: UIViewController {
             hostingOnboardingView.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0),
             hostingOnboardingView.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
         ])
-    }
-}
-
-extension OnboardingVC: CarouselActionDelegate {
-    func finishCarousel() {
-        print("continue to another section")
     }
 }

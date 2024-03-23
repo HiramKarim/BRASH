@@ -24,6 +24,9 @@
 		1F73BEE12BAA6F9200321CC6 /* StorageModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F73BED82BAA6F9100321CC6 /* StorageModule.framework */; };
 		1F73BEE22BAA6F9200321CC6 /* StorageModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F73BED82BAA6F9100321CC6 /* StorageModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F73BF1E2BAAA41900321CC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */; };
+		1F8D2E962BAE1FC70021D8C0 /* HomeMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D2E952BAE1FC70021D8C0 /* HomeMapVM.swift */; };
+		1F8D2E982BAE2E010021D8C0 /* HostMapHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D2E972BAE2E010021D8C0 /* HostMapHomeVC.swift */; };
+		1F8FB9482BAD671F0012E44B /* HomeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8FB9472BAD671F0012E44B /* HomeMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		1F73BED72BAA6F9100321CC6 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BED82BAA6F9100321CC6 /* StorageModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StorageModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		1F8D2E952BAE1FC70021D8C0 /* HomeMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapVM.swift; sourceTree = "<group>"; };
+		1F8D2E972BAE2E010021D8C0 /* HostMapHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMapHomeVC.swift; sourceTree = "<group>"; };
+		1F8FB9472BAD671F0012E44B /* HomeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +141,9 @@
 		1F73BDE62BAA60F100321CC6 /* BrashApp */ = {
 			isa = PBXGroup;
 			children = (
-				1F73BF1C2BAAA3E400321CC6 /* OnboardingScene */,
+				1F8D2E932BAE1F480021D8C0 /* Domain */,
+				1F8D2E922BAE1F340021D8C0 /* Infrastructure */,
+				1F8D2E912BAE1F1D0021D8C0 /* Presentation */,
 				1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */,
 				1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */,
 				1F73BDF02BAA60F300321CC6 /* Assets.xcassets */,
@@ -180,6 +188,47 @@
 				1F73BF1D2BAAA41900321CC6 /* OnboardingVC.swift */,
 			);
 			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		1F8D2E912BAE1F1D0021D8C0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F73BF1C2BAAA3E400321CC6 /* OnboardingScene */,
+				1F8FB9462BAD66FD0012E44B /* HomeMapScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F8D2E922BAE1F340021D8C0 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1F8D2E932BAE1F480021D8C0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D2E942BAE1F6E0021D8C0 /* HomeMap */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1F8D2E942BAE1F6E0021D8C0 /* HomeMap */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D2E952BAE1FC70021D8C0 /* HomeMapVM.swift */,
+			);
+			path = HomeMap;
+			sourceTree = "<group>";
+		};
+		1F8FB9462BAD66FD0012E44B /* HomeMapScene */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FB9472BAD671F0012E44B /* HomeMapView.swift */,
+				1F8D2E972BAE2E010021D8C0 /* HostMapHomeVC.swift */,
+			);
+			path = HomeMapScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +361,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8D2E962BAE1FC70021D8C0 /* HomeMapVM.swift in Sources */,
 				1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */,
 				1F73BF1E2BAAA41900321CC6 /* OnboardingVC.swift in Sources */,
+				1F8FB9482BAD671F0012E44B /* HomeMapView.swift in Sources */,
+				1F8D2E982BAE2E010021D8C0 /* HostMapHomeVC.swift in Sources */,
 				1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +547,7 @@
 				INFOPLIST_FILE = BrashApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BRASH;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want access to your localization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -525,6 +578,7 @@
 				INFOPLIST_FILE = BrashApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BRASH;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want access to your localization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";

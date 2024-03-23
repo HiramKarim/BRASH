@@ -20,7 +20,7 @@ public protocol CarouselActionDelegate:AnyObject {
 
 public struct OnboardingView: View {
     
-    public var delegate:CarouselActionDelegate!
+    public var delegate:CarouselActionDelegate?
     
     public init() { }
 
@@ -80,7 +80,7 @@ public struct OnboardingView: View {
                     Spacer()
                     
                     Button("Go to home") {
-                        delegate.finishCarousel()
+                        delegate?.finishCarousel()
                     }
                     .buttonStyle(.borderedProminent)
                 }
