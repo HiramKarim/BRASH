@@ -5,23 +5,20 @@
 //  Created by Hiram Castro on 22/03/24.
 //
 
-import Foundation
+import Combine
 import MapKit
 import CoreLocation
 import SwiftUI
 
 final class HomeMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
+    private var cancellable: AnyCancellable?
     
-    @Published var mapRegion = MKCoordinateRegion()
+    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.457105, longitude: -80.508361),
+                                                  span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     
-    var binding: Binding<MKCoordinateRegion> {
-        Binding {
-            self.mapRegion
-        } set: { newRegion in
-            self.mapRegion = newRegion
-        }
-    }
+
     
     override init() {
         super.init()
@@ -31,69 +28,25 @@ final class HomeMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        let previousAuthorizationStatus = manager.authorizationStatus
-        manager.requestWhenInUseAuthorization()
-        if manager.authorizationStatus != previousAuthorizationStatus {
-            checkLocationAuthorization()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locations.last.map {
-            mapRegion = MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-            )
-        }
-    }
-    
-    private func checkLocationAuthorization() {
-        switch locationManager.authorizationStatus {
-        case .notDetermined:
-            break
-        case .restricted:
-            break
-        case .denied:
-            break
-        case .authorizedAlways, .authorizedWhenInUse:
-            if let location = locationManager.location {
-                mapRegion = MKCoordinateRegion(center: location.coordinate,
-                                               span: MKCoordinateSpan(latitudeDelta: 0.2,
-                                                                      longitudeDelta: 0.2))
-            }
-        default:
-            break
-        }
-    }
-}
-
-class LocationDataManager : NSObject, ObservableObject, CLLocationManagerDelegate {
-    var locationManager = CLLocationManager()
-    
-    @Published var authorizationStatus: CLAuthorizationStatus?
-    
-    override init() {
-        super.init()
-        locationManager.delegate = self
-    }
+    //MARK: - CoreLocation Delegates
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
-        case .authorizedWhenInUse:  // Location services are available.
+        case .authorizedAlways, .authorizedWhenInUse:  // Location services are available.
             // Insert code here of what should happen when Location services are authorized
-            authorizationStatus = .authorizedWhenInUse
             locationManager.requestLocation()
             break
             
         case .restricted:  // Location services currently unavailable.
             // Insert code here of what should happen when Location services are NOT authorized
             authorizationStatus = .restricted
+            manager.requestWhenInUseAuthorization()
             break
             
         case .denied:  // Location services currently unavailable.
             // Insert code here of what should happen when Location services are NOT authorized
             authorizationStatus = .denied
+            manager.requestWhenInUseAuthorization()
             break
             
         case .notDetermined:        // Authorization not determined yet.
@@ -107,7 +60,11 @@ class LocationDataManager : NSObject, ObservableObject, CLLocationManagerDelegat
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // Insert code to handle location updates
+        if let location = locations.last {
+            let newRegion = MKCoordinateRegion(center: location.coordinate,
+                                               span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+            mapRegion = newRegion
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

@@ -36,6 +36,9 @@ class OnboardingVC: UIViewController {
 
 extension OnboardingVC: CarouselActionDelegate {
     func finishCarousel() {
-        self.navigationController?.pushViewController(HostMapHomeVC(), animated: true)
+        self.navigationController?.viewControllers.removeFirst()
+        let navController = UINavigationController(rootViewController: HostMapHomeVC())
+        SceneDelegate.window?.rootViewController = navController
+        SceneDelegate.window?.makeKeyAndVisible()
     }
 }

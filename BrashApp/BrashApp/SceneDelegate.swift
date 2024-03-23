@@ -9,17 +9,17 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+    static var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let window = (scene as? UIWindowScene) else { return }
-        self.window = UIWindow(windowScene: window)
+        SceneDelegate.window = UIWindow(windowScene: window)
         
         let navController = UINavigationController(rootViewController: OnboardingVC())
         
-        self.window?.rootViewController = navController
-        self.window?.makeKeyAndVisible()
+        SceneDelegate.window?.rootViewController = navController
+        SceneDelegate.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
