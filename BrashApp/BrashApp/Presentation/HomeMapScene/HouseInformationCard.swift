@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HouseInformationCard: View {
     
-    @StateObject var vm = HomeMapVM()
+    var vm:HomeMapVM
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -62,5 +62,5 @@ struct HouseInformationCard: View {
 }
 
 #Preview {
-    HouseInformationCard()
+    HouseInformationCard(vm: HomeMapVM())
 }

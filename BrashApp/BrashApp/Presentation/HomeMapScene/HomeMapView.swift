@@ -15,7 +15,9 @@ struct Annotation: Identifiable {
 
 struct HomeMapView: View {
     
-    @StateObject var vm = HomeMapVM()
+    private let screen = UIScreen.main.bounds
+    
+    @ObservedObject var vm = HomeMapVM()
 
     @State private var region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
@@ -30,6 +32,7 @@ struct HomeMapView: View {
     
     var body: some View {
         ZStack {
+            
             Map(coordinateRegion: $region,
                 interactionModes: .all,
                 showsUserLocation: true,
@@ -40,6 +43,7 @@ struct HomeMapView: View {
                                                              longitude: -122.4194), tint: .blue)
                 }
                 .ignoresSafeArea(.all)
+                .frame(maxWidth: .infinity)
                 .onAppear(perform: {
                     
                 })
@@ -54,10 +58,12 @@ struct HomeMapView: View {
                 
                 Spacer()
                 
-                HouseInformationCard()
-                
+                HouseInformationCard(vm: vm)
+                    .frame(width: screen.width * 0.95, height: screen.width * 0.60)
             }
+            
         }
+        
     }
 }
 
