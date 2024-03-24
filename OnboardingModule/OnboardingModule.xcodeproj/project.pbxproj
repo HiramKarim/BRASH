@@ -137,6 +137,7 @@
 		1F73BE232BAA6CE600321CC6 /* OnboardingModule */ = {
 			isa = PBXGroup;
 			children = (
+				1F91D5882BAFA66E009FC88C /* ModuleBoundary */,
 				1F73BF182BAA736B00321CC6 /* OnboardingSection */,
 				1F73BE242BAA6CE600321CC6 /* OnboardingModule.h */,
 				1F8FB9442BAD51470012E44B /* Media.xcassets */,
@@ -189,6 +190,13 @@
 				1F73BF192BAA73A100321CC6 /* OnboardingView.swift */,
 			);
 			path = OnboardingSection;
+			sourceTree = "<group>";
+		};
+		1F91D5882BAFA66E009FC88C /* ModuleBoundary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModuleBoundary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

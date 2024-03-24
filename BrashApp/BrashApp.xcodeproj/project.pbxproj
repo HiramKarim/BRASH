@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F4C1DC72BAFC8A300DD0F40 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C1DC62BAFC8A300DD0F40 /* HouseModel.swift */; };
+		1F4C1DC92BAFE8BD00DD0F40 /* HouseInformationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C1DC82BAFE8BD00DD0F40 /* HouseInformationCard.swift */; };
 		1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */; };
 		1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */; };
 		1F73BDF12BAA60F300321CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F73BDF02BAA60F300321CC6 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F4C1DC62BAFC8A300DD0F40 /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		1F4C1DC82BAFE8BD00DD0F40 /* HouseInformationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseInformationCard.swift; sourceTree = "<group>"; };
 		1F73BDE42BAA60F100321CC6 /* BrashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73BDE72BAA60F100321CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F73BDE92BAA60F100321CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8D2E952BAE1FC70021D8C0 /* HomeMapVM.swift */,
+				1F4C1DC62BAFC8A300DD0F40 /* HouseModel.swift */,
 			);
 			path = HomeMap;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 			children = (
 				1F8FB9472BAD671F0012E44B /* HomeMapView.swift */,
 				1F8D2E972BAE2E010021D8C0 /* HostMapHomeVC.swift */,
+				1F4C1DC82BAFE8BD00DD0F40 /* HouseInformationCard.swift */,
 			);
 			path = HomeMapScene;
 			sourceTree = "<group>";
@@ -362,10 +368,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8D2E962BAE1FC70021D8C0 /* HomeMapVM.swift in Sources */,
+				1F4C1DC92BAFE8BD00DD0F40 /* HouseInformationCard.swift in Sources */,
 				1F73BDE82BAA60F100321CC6 /* AppDelegate.swift in Sources */,
 				1F73BF1E2BAAA41900321CC6 /* OnboardingVC.swift in Sources */,
 				1F8FB9482BAD671F0012E44B /* HomeMapView.swift in Sources */,
 				1F8D2E982BAE2E010021D8C0 /* HostMapHomeVC.swift in Sources */,
+				1F4C1DC72BAFC8A300DD0F40 /* HouseModel.swift in Sources */,
 				1F73BDEA2BAA60F100321CC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

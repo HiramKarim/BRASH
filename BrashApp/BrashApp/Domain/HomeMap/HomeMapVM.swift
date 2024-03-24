@@ -71,3 +71,26 @@ final class HomeMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
         print("error: \(error.localizedDescription)")
     }
 }
+
+extension HomeMapVM {
+    func getRentHousesDataMock() -> [HouseModel] {
+        return [
+            HouseModel(info:"House for rent",
+                       totalBeds: "4 bds",
+                       totalBath: "3 ba",
+                       sqftInfo: "2,348 sqft",
+                       address: "2125 Carter Ct, Calexico, CA",
+                       rentCost: "US$520,000",
+                       amountDecreased: "US$19,000 (24 Feb)",
+                       imageURL: "house-1"),
+            HouseModel(info:"House for rent",
+                       totalBeds: "4 bds",
+                       totalBath: "3 ba",
+                       sqftInfo: "2,348 sqft",
+                       address: "2125 Carter Ct, Calexico, CA",
+                       rentCost: "US$520,000",
+                       amountDecreased: "US$19,000 (24 Feb)",
+                       imageURL: "house-1")
+        ]
+    }
+}
