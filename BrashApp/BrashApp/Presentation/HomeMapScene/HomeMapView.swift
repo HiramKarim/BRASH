@@ -43,26 +43,30 @@ struct HomeMapView: View {
                                                              longitude: -122.4194), tint: .blue)
                 }
                 .ignoresSafeArea(.all)
-                .frame(maxWidth: .infinity)
                 .onAppear(perform: {
                     
                 })
             
             VStack {
                 HStack {
+                    Image(systemName: "magnifyingglass")
                     TextField("Search for location", text: $textforSearch)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.white))
+                    Image(systemName: "slider.horizontal.3")
                 }
                 .padding()
+                .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.white))
+                .padding(.top, 70)
+                .frame(width: screen.width * 0.95, height: 100)
                 
                 Spacer()
                 
                 HouseInformationCard(vm: vm)
                     .frame(width: screen.width * 0.95, height: screen.width * 0.60)
+                    .padding(.bottom, 20)
             }
             
         }
+        .ignoresSafeArea(.all)
         
     }
 }
