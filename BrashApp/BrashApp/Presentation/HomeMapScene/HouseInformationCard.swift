@@ -19,20 +19,34 @@ struct HouseInformationCard: View {
                     
                         VStack {
                             
-                            ZStack {
+                            ZStack {//Image
                                 Image(houseInfo.imageURL ?? "")
                                     .resizable()
                                     .frame(width: 350, height: 100)
                                     .clipped()
                                     .background(Color.red)
                                 
-                                HStack {
-                                    Text(houseInfo.amountDecreased ?? "")
-                                        .foregroundStyle(Color.white)
+                                VStack {
+                                    HStack(spacing: 100) {
+                                        HStack() {
+                                            Text(houseInfo.amountDecreased ?? "")
+                                                .foregroundStyle(Color.white)
+                                                .bold()
+                                        }
+                                        .frame(width: 200)
+                                        .background(RoundedRectangle(cornerRadius: 10)
+                                            .foregroundColor(.black).opacity(0.7))
+                                        
+                                        Image(systemName: "heart")
+                                            .resizable()
+                                            .frame(width: 25, height: 20)
+                                            .symbolRenderingMode(.palette)
+                                            .foregroundStyle(Color.white)
+                                    }
                                 }
-                                .frame(width: 200)
-                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.black).opacity(0.7))
-                            }
+                                .padding(.bottom, 60)
+                                
+                            }//Image
                                 
                             HStack {
                                 Text(houseInfo.rentCost ?? "")
